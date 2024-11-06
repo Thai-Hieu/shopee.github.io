@@ -1,0 +1,1361 @@
+.app {
+    overflow: hidden;
+}
+.header {
+    height: var(--header-height);
+    background-image: linear-gradient(0, #fe6333, #f6402d);
+}
+.header__navbar {
+    display: flex;
+    justify-content: space-between;
+}
+.header__navbar-list {
+    display: flex;
+    text-decoration: none;
+    list-style-type: none;
+    padding-left: 0;
+    margin: 4px 0 0 0;
+}
+.header__navbar-item,
+.header__navbar-item-link {
+    display: inline-block;
+    font-size: 1rem;
+    color: var(--while-color);
+    text-decoration: none;
+    font-weight: 300;
+}
+.header__navbar-item:hover,
+.header__navbar-item-link:hover {
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+}
+.header__navbar-item-no-pointer {
+    margin-right: 4px;
+    cursor: text;
+    color: var(--while-color);
+}
+.header__navbar-item {
+    margin: 0 8px;
+    position: relative;
+}
+.header__navbar-item-bolb {
+    font-weight: 400;
+}
+.header__navbar-item-use {
+    position: relative;
+    margin: 0 8px;
+    display: inline-block;
+    font-size: 1rem;
+    color: var(--while-color);
+    font-weight: 300;
+    text-decoration: none;
+}
+.header__navbar-item-use:hover .header__navbar-item-use-menu {
+    display: block;
+} 
+.header__navbar-item-link1 {
+    display: inline-block;
+    font-size: 1rem;
+    color: var(--while-color);
+    text-decoration: none;
+    font-weight: 400;
+}
+.header__navbar-item-link1:hover {
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+}
+.header__navbar-icon1 {
+    font-size: 0.9rem;
+    margin: 0 5px 2px;
+}
+.header__navbar-item-use-menu {
+    position: absolute;
+    z-index: 1;
+    padding-left: 0;
+    top: calc(100% + 6px);
+    right: 0;
+    width: 160px;
+    background-color: var(--while-color);
+    border-radius: 2px;
+    list-style: none;
+    box-shadow: 0 1px 2px #e0e0e0;
+    display: none;
+    animation: fadein linear 0.2s ;
+}
+.header__navbar-item-use-item a:first-child {
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+.header__navbar-item-use-item a:last-child {
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+.header__navbar-item-use-item a {
+    display: block;
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1rem;
+    padding: 4px 16px;
+    color: var(--text-color);
+}
+.header__navbar-item-use-item-separate {
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+.header__navbar-item-use-item a:hover {
+    background-color: #fafafa;
+}
+.header__navbar-item-use-menu::before {
+    position: absolute;
+    z-index: -1;
+    right: 15px;
+    top: -18px;
+    content: "";
+    border-width:10px 12px;
+    border-style: solid;
+    border-color: transparent transparent var(--while-color) transparent; /*mui ten huong len  tung tu cac hung con lai ma cho thanh mau trong suot*/
+}
+.header__navbar-item-use-menu::after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: -8px;
+    right: 0;
+    height: 8px;
+    width: 100%;
+}
+.header__navbar-item-separate::after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-left: 1px solid #fff;
+    height: 15px;
+    right: -9px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.header__navbar-icon-link {
+    color: var(--while-color);
+    text-decoration: none;
+}
+.header__navbar-icon-link:hover {
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+}
+.header__navbar-icon {
+    font-size: 1rem;
+    margin: 0 5px;
+}
+.fa-instagram {
+    font-size: 1.08rem;
+    margin-top: 1px;
+}
+/* can giuw icon va ket noi */
+.header__navbar-item,
+.header__navbar-item-link,
+.header__navbar-icon-link {
+    display: flex;
+    align-items: center;
+    z-index: 10;
+}
+/* header-QR */
+.header__QR {
+   background-color: var(--while-color);
+   width: 186px;
+   position: absolute;
+   left: 0;
+   top: 120%;
+   padding: 8px;
+   border-radius: 2px;
+   display: none;
+   margin-left: 80px;
+   z-index: 1;
+   animation: fadein ease-in 0.4s;
+   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+.header__QR::before {
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 20px;
+    left: 0;
+    top: -18px;
+} 
+.header__navbar-item-QR:hover .header__QR {
+    display: block;
+    z-index: 1;
+}
+.header__QR-img {
+   width: 100%;
+}
+.header__QR-apps {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -30px;
+}
+.header__QR-link:nth-child(1) {
+    margin-left: 11px;
+}
+.header__QR-link:nth-child(2) {
+    margin-right: 11px;
+}
+.header__QR-downloat {
+   height: 16px;
+}
+/* header__notification */ 
+.header__notifi {
+    position: absolute;
+    width: 404px;
+    top: 118%;
+    right: 0;
+    background-color: var(--while-color);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    cursor: default;
+    transform-origin: calc(100%-32px) top; /*dam tu duoi len*/
+    will-change: opacity, transform;
+    animation: hello ease-in 0.2s;
+    -webkit-animation: hello ease-in 0.2s;/*safari*/
+    display: none; 
+}
+.header__navbar-item-header-notifi:hover .header__notifi {
+    display: block;
+    z-index: 1;
+}
+.header__notifi::after{
+    content: "";
+    position: absolute;
+    width: calc(30%);
+    height: 20px;
+    left: 0;
+    top: -18px;
+    margin-left: 283px;/*hoac display: block;*/
+} 
+.header__notifi::before {
+    position: absolute;
+    right: 15px;
+    top: -28px;
+    content: "";
+    border-width: 20px 25px;
+    border-style: solid;
+    border-color: transparent transparent var(--while-color) transparent; /*mui ten huong len  tung tu cac hung con lai ma cho thanh mau trong suot*/
+}  
+@keyframes hello {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+.header__notifi-header {
+height: 40px;
+background-color: var(--while-color);
+
+}
+.header__notifi-header h3 {
+    color: #999;
+    margin: 0 0 0 12px;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 40px; /*can giua dong*/
+    user-select: none;
+}
+.header__notifi-list {
+    padding-left: 0;
+
+}
+.header__notifi-item {
+    display: flex;
+}
+.header__notifi-item:hover {
+   background-color: #f7f7f7;
+}
+.header__notifi-item-readed {
+     background-color: rgba(238, 77, 45, 0.08);
+}
+.header__notifi-link {
+    display: flex;
+    padding: 12px;
+    text-decoration: none;
+    width: 100%;
+}
+.header__notifi-img {
+    width: 50px;
+    object-fit: contain;
+}
+.header__notifi-body {
+    margin-left: 12px;
+}
+.header__notifi-name {
+    display: block;
+    font-size: 1.4rem;
+    color: var(--text-color);
+    font-weight: 400;
+    line-height: 1.8rem;
+}
+.header__notifi-descriotion {
+    display: block;
+    color: #756f6e;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    margin-top: 4px;
+}
+.header__notifi-footer {
+    display: flex;
+}
+.header__notifi-footer-btn {
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 8px 0;
+    width: 100%;
+    margin: auto;
+    font-size: 1.4rem;
+    font-weight: 400;
+    text-align: center;
+}
+/* header__sort-bar */
+.header__sort-bar {
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    height: var(--header-sort-height);
+    background-color: var(--while-color);
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    display: none;
+}
+.header__sort-item {
+    flex: 1; /*can giua*/
+}
+.header__sort-link  {
+    position: relative;
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1rem;
+    display: block;
+    height: 100%;
+    line-height: var(--header-sort-height);
+    text-align: center;
+}
+.header__sort-link:first-child .header__sort-link::after {
+    display: none;
+}
+
+.header__sort-link::after {
+    content: "";
+    position: absolute;
+    top: 50%;/*thang chua no*/
+    left: 0;
+    height: 60%;
+    border-left: 1px solid #e5e5e5;
+    transform: translateY(-50%);/*cua chinh no*/
+}
+.header__sort-item-active {
+    color: var(--primary-color);
+}
+/* authen modal */
+.authen__form {
+    width: 500px;
+    background-color: var(--while-color);
+    border-radius: 5px;
+    overflow: hidden;
+}
+.authen__form-container {
+    padding: 0 32px;
+}  
+.authen__form-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}            
+.authen__form-heading {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--text-color);
+}
+.authen__form-switch-btn {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+.authen__form-input {
+    width: 100%;
+    height: 36px;
+    margin-top: 16px;
+    padding: 0 12px;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 2px;
+    outline: none;
+}
+.authen__form-input:focus {
+    border-color: #888;
+}
+.authen__form-aside {
+    margin-top: 18px;
+}
+.authen__form-policy-text {
+    font-size: 0.8rem;
+    line-height: 1.4rem;
+    text-align: center;
+    padding: 0 12px;
+}
+.authen__form-text-link {
+     text-decoration: none;
+     color: var(--primary-color);
+}
+.authen__form-controls {
+     margin-top: 85px;
+     display: flex;
+     justify-content: flex-end;
+}
+.authen__form-controls-btn-primary,
+.authen__form-controls-btn {
+    min-width: 142px;
+    height: 34px;
+    text-decoration: none;
+    border: none;
+    border-radius: 2px;
+    font-size: 1rem;
+    padding: 0;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+    line-height: 35px;
+    margin-left: 8px;
+}
+.authen__form-controls-btn1 {
+    line-height: 37px;
+}
+.authen__form-controls-btn:hover {
+     background-color: rgba(0, 0, 0, 0.1);
+}
+.authen__form-controls-btn-primary {
+    color: var(--while-color);
+    background-color: var(--primary-color);
+}
+.authen__form-social {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f5f5f5;
+    padding: 15px 32px;
+    margin-top: 18px;
+    border-radius: 5px;
+}
+.authen__form-social-btn {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     height: 32px;
+     font-size: 0.9rem;
+     text-decoration: none;
+    }
+.authen__form-social-btn-facebook {
+    background-color: #3a5a98;
+    color: var(--while-color);
+    padding: 10px;
+}
+.authen__form-social-btn-google {
+    color: var(--text-color);
+    background-color: var(--while-color);
+    padding: 10px;
+}
+.authen__form-social-title {
+    margin: 0 15px;
+}
+.authen__form-social-icon {
+     font-size: 1.1rem;
+}
+ /* đăng nhập */
+ .authen__form-help {
+    display: flex;
+    justify-content: flex-end;
+ }
+.authen__form-help-link {
+    text-decoration: none;
+    font-size: 0.9rem;
+    color: #939393;
+}
+.authen__form-help-forgot {
+    color: var(--primary-color);
+}
+.authen__form-help-separate {
+    display: block;
+    height: 18px;
+    margin: 2px 16px 0;
+    border-left: 1px solid #EAEAEA;
+}
+/* search */
+.header-widt-search {
+    height: var( --header-widt-search-height);
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+/* searchg mobile */
+.header__mobile-search {
+    padding: 0 12px;
+    display: none;/*an o pc*/
+}
+.header__mobile-search-icon {
+    font-size: 1.6rem;
+    color: var(--while-color);
+}
+.header__logo {
+    width: 200px;
+}
+.header__logo-link {/*k bi anh huong boi trinh duyet cu*/
+    display: block;
+    line-height: 0;
+    color: transparent;
+    text-decoration: none;
+}
+.header__logo-img {
+    width: 150px;
+}
+.header__mobile-search-checkbox:checked ~ .header__search {
+    display: flex;
+}
+.header__search {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    background-color: var(--while-color);
+    height: 40px;
+    border-radius: 2px;
+}
+.header__search-input {
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    color: var(--text-color);
+    padding: 0 16px;
+    border-radius: 2px;
+}
+.header__cart {
+    width: 150px;
+    text-align: center;
+}
+.header__cart-wrap {
+    position: relative;
+    display: inline-block;
+    padding: 0 8px;
+    cursor: pointer;
+    z-index: 4;
+    -webkit-tap-highlight-color: transparent;/*bo di phan highlight*/
+}
+.header__cart-wrap:hover .header__cart-list {
+    display: block;
+}
+/* tao mui ten */
+.header__cart-list::after {
+    content: "";
+    position: absolute;
+    right: 1px;
+    top: -28px;
+    border-width: 18px 22px;
+    border-style: solid;
+    cursor: pointer;
+    border-color: transparent transparent var(--while-color) transparent;
+}
+.header__cart-list {
+    position: absolute;
+    top: calc(100% + 4px);
+    right: -1px;
+    background-color: var(--while-color);
+    width: 400px;
+    border-radius: 2px;
+    box-shadow: 0 1px 3.125rem 0 rgba(0, 0, 0, 0.2);
+    display: none;
+    cursor: default;
+    animation: fadein ease-in 0.2s;
+    z-index: 4;
+} 
+.header__cart-list-no-cart .header__cart-list-no-cart-img,
+.header__cart-list-no-cart .header__cart-list-no-cart-msg {
+    display: block;
+    margin: 0 auto;
+}
+.header__cart-list-no-cart {
+    padding: 16px 0;
+}
+.header__cart-list-no-cart-img {
+    display: none;/*co cart*/
+    width: 35%;
+}
+.header__cart-list-no-cart-msg {
+    display: none; /*co cart*/
+    font-size: 1rem;
+    margin-top: 15px;
+    color: var(--text-color);
+}
+.header__cart-notice {
+    position: absolute;
+    padding: 1px 5px;
+    right: -8px;
+    top: -6px;
+    font-size: 0.8rem;
+    line-height: 1rem;
+    border: 2px solid #ee4d2d;
+    border-radius: 10px;
+    background-color: var(--while-color);
+    color: var(--primary-color);
+}
+.header__cart-icon {
+    color: var(--while-color);
+    font-size: 1.8rem;
+    margin-top: 5px;
+}
+/* co hang */
+.header__cart-heading {
+    text-align: left;
+    margin: 8px 0 8px 12px;
+}
+.header__cart-list-item {
+    padding-left: 0;
+    list-style: none;
+    font-size: 1rem;
+    font-family: 400;
+    max-height: 56vh;/*thay doi theo kich thuopc trinh duyet*/
+    overflow-y: scroll;
+}
+.header__cart-item {
+    display: flex;
+    align-items: center;
+}
+.header__cart-item:hover {
+    background-color: #f8f8f8;
+}
+.header__cart-img {
+    width: 42px;
+    height: 42px;
+    margin: 12px;
+    border: 1px solid #e8e8e8;
+    display: flex;
+    flex-shrink: 0;/*amh k co lai*/
+}
+.header__cart-item-info {
+    width: 100%;
+    margin-right: 12px;
+}
+.header__cart-item-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header__cart-item-name {
+    display: flex;
+    flex: 1;
+    font-size: 1rem;
+    line-height: 1.4rem;
+    max-height: 2.8rem;/*gap doi linheight thanh hai dong*/
+    overflow: hidden;
+    font-weight: 500;
+    color: var(--text-color);
+    margin: 0;
+    padding-right: 16px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    text-align: left;
+}
+.header__cart-item-price {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--primary-color);
+}
+.header__cart-item-multiply {
+    color: #757575;
+    font-size: 0.8rem;
+    margin: 0 4px;
+}
+.header__cart-item-body {
+    display: flex;
+    justify-content: space-between;
+}
+.header__cart-item-description {
+    color: #757575;
+    font-size: 0.8rem;
+    font-weight: 300;
+}
+.header__cart-item-quantify {
+    font-size: 0.9rem;
+    color: #757575;
+}
+.header__cart-item-quantify:hover {
+    cursor: pointer;
+    color: var(--primary-color);
+}
+.header__cart-item-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 32px;
+    font-size: 0.9rem;
+    color: var(--while-color);
+    background-color: var(--primary-color);
+    text-decoration: none;
+    border: none;
+    border-radius: 2px;
+    float: right;
+    margin: 0 12px 10px 0;
+    min-width: 124px;/*dat chiru dai nut */
+}
+.header__cart-item-btn:hover {
+    background-color: #f50d41;
+}
+
+.header__search-select {
+    border-left: 1px solid #ccc;
+    padding-left: 16px;
+    position: relative;
+    cursor: pointer;
+    z-index: 2;
+}
+.header__search-select-label {
+    font-size: 1rem;
+    color: var(--text-color);
+}
+.header__search-select-label-icon {
+    font-size: 1rem;
+    color: #4a4a4a;
+    margin: 0 16px 0 8px;
+    /* position: relative;
+    top: 2px; neu muon di chuyen rieng */
+}
+.header__search-btn {
+    background-color: var(--primary-color);
+    border: none;
+    height: 36px;
+    width: 60px;
+    border-radius: 2px;
+    margin-right: 3px;
+    outline: none;
+}
+.header__search-btn:hover {
+    background-color: #ff7c62;
+    cursor: pointer;
+}
+.header__search-btn-icon {
+    color: var(--while-color);
+    font-size: 1rem;
+}
+.header__search-option { 
+    position: absolute;
+    right: 0;
+    top: calc(100% - 6px);
+    width: 142px;
+    list-style: none;
+    padding-left: 0;
+    box-shadow: 0 2px 3px #d3d3d3;
+    border-radius: 2px;
+    display: none; 
+    animation: fadein ease-in 0.2s;
+}
+.header__search-select:hover .header__search-option {
+    display: block;
+}
+.header__search-option::after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 15px;
+    top: -15px;
+    left: 0;
+}
+.header__search-option-item {
+    background-color: var(--while-color);
+    padding: 8px 8px;
+}
+.header__search-option-item:first-child {
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+.header__search-option-item:last-child {
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+.header__search-option-item:hover {
+    background-color: #fafafa;
+    cursor: pointer;
+}
+.header__search-option-item span {
+    font-size: 1rem;
+    color: var(--text-color);
+    padding-left: 10px;
+}
+.header__search-option-item i {
+    font-size: 1rem;
+    color: var(--primary-color);
+    margin-left: 12px;
+    display: none;/*neu can an icon*/
+}
+.header__search-option-item-active i {
+    display: inline-block;/*khong bi xuong dong*/
+}
+/* search hítory */
+.header__search-input-wrap {
+    flex: 1;
+    height: 100%;
+    position: relative;
+}
+.header__search-history {
+    position: absolute;
+    top:calc(100% + 2px);
+    left: 0;
+    width: calc(100% - 16px);
+    background-color: var(--while-color);
+    border-radius: 2px;
+    box-shadow: 0 1px 5px #9f9e9e;
+    display: none;
+    overflow: hidden;
+    z-index: 1;
+}
+.header__search-history-heading {
+    padding: 0;
+    margin: 6px 16px;
+    font-size: 1rem;
+    color: var(--text-color);
+    font-weight: 400;
+}
+.header__search-history-list {
+     padding: 0;
+    margin: 4px 0 0 0;
+    list-style: none;
+}
+.header__search-history-item {
+    height: 38px;
+    padding: 0 16px;
+    line-height: 38px;
+}
+.header__search-history-item:hover {
+    background-color: #f5f5f5;
+    cursor: pointer;
+}
+.header__search-history-item a {
+    text-decoration: none;
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
+.header__search-input:focus ~ .header__search-history {/*lay tat ca phan tu sau the input*/
+    display: block;
+    z-index: 3;
+}
+/* app contaier */
+.app__contaier {
+    background-color: #f5f5f5;
+}
+.app__content {
+    padding-top: 36px;
+}
+.category {
+    border-radius: 2px;
+    background-color: var(--while-color);
+}
+.category-heading {
+    font-size: 1.4rem;
+    color: var(--text-color);
+    padding: 16px 20px 0;
+    margin: 0;
+    text-transform: uppercase;/*chu in hoa*/
+}
+.category__item {
+    position: relative;
+}
+.category__item:first-child::after {
+    display: none;
+}
+.category__item::after {
+    content: "";
+    position: absolute;
+    border-top: 1px solid #e1e1e1;
+    top: 0;
+    left: 20px;
+    right: 20px;
+}
+.category___list {
+    list-style: none;
+    padding-left: 0;
+    padding-bottom: 8px;
+    margin-left: 11px;
+}
+.category__item-active .category__item-link {
+    color: var(--primary-color);
+}
+.category__item-link {
+    position: relative;
+    display: block;
+    font-size: 1rem;
+    padding: 6px 20px;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: right linear 0.1s;/*khi hover se chuy dong o right se chay tu 0 toi 4*/
+    right: 0;
+}
+.category__item-link:hover {
+    right: -4px;
+    color: var(--primary-color);
+}
+/* Home sort + filter */
+.home__filter {
+    display: flex;
+    align-items: center;
+    padding: 12px 22px;
+    background-color: rgba(0, 0, 0, 0.04);
+}
+.home__filter-label {
+    color: #555555;
+    font-size: 1rem;
+    margin-right: 16px;
+}
+.home__filter-btn {
+    background-color: var(--while-color);
+    min-width: 90px;
+    padding: 8px 16px;
+    margin-right: 12px;
+    border: none;
+    font-size: 1rem;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.home__filter-btn-primary {
+    background-color: var(--primary-color);
+    padding: 8px 16px;
+    border: none;
+    font-size: 1rem;
+    border-radius: 2px;
+    cursor: pointer;
+    color: var(--while-color);
+}
+.home__filter-btn-primary:hover {
+    background-color: rgb(251, 99, 39);
+}
+.home__filter-select-input {
+    position: relative;
+    width: 200px;
+    height: 34px;
+    padding: 0 12px;
+    background-color: var(--while-color);
+    border-radius: 2px;
+    min-width: 120px;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1rem;
+    display: flex;
+    z-index: 1;
+}
+.home__filter-select-input:hover .home__filter-select-list {
+    display: block;
+}
+.home__filter-select-input-icon {
+    font-size: 1rem;
+    color: #4a4a4a;
+}
+.home__filter-select-list {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 38px;
+    margin: 0;
+    padding: 8px 16px;
+    border-radius: 2px;
+    background-color: var(--while-color);
+    list-style: none;
+    display: none; 
+}
+.home__filter-select-list::after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 15px;
+    top: -15px;
+    left: 0;
+}
+.home__filter-select-item-link {
+    font-size: 1rem;
+    color: var(--text-color);
+    text-decoration: none;
+    display: block;
+    padding: 4px 0;
+}
+.home__filter-select-item-link:hover {
+    color: var(--primary-color);
+}
+.home__filter-page {
+    display: flex;
+    align-items: center;
+    margin-left: auto;/*bay sang phai*/
+}
+.home__filter-page-num {
+    font-size: 1rem;
+    color: var(--text-color);
+    margin-right: 22px;
+}
+.home__filter-page-current {
+    color: var(--primary-color);
+}
+.home__filter-page-control {
+    display: flex;
+    border-radius: 2px;
+    overflow: hidden;
+    width: 72px;
+    height: 36px;
+}
+.home__filter-page-btn {
+    display: flex;
+    flex: 1;
+    text-decoration: none;
+    background-color: var(--while-color);
+}
+.home__filter-page-btn:first-child {
+    border-right: 1px solid #eee;
+}
+.home__filter-page-btn-disable {
+    background-color: #f9f9f9;
+    cursor: default;
+}
+.home__filter-page-btn-disable .home__filter-page-icon {
+    color: #ccc;
+}
+.home__filter-page-icon {
+    margin: auto;/*nam giua*/
+    font-size: 1rem;
+    color: #555;
+}
+/* dieu huong mobile & tablet */
+.mobile__category {
+    display: none;/*an o pc*/
+}
+.mobile__category-list {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+    max-width: 100%;
+    overflow-x: auto;/*taoj ra thanh keo theo chieu ngang*/
+}
+.mobile__category-list::-webkit-scrollbar {
+    display: none; /*an thanh scrol*/
+}
+.mobile__category-item {
+    flex-shrink: 0; /* the cha bi gioi han kich thuoc bi co lai thi su dung thuoc tinh nay de khong bi rung xuong*/
+    margin-right: 10px;
+}
+.mobile__category-item:nth-of-type(3n) .mobile__category-link {/*lay theo loai con cua mot the khac*/
+    background-color: #87afd8;
+}
+.mobile__category-item:nth-of-type(3n + 1) .mobile__category-link {/*tra ve phan tu thu 1*/
+    background-color: #87afd8;
+}
+.mobile__category-item:nth-of-type(3n + 2) .mobile__category-link {/*tra ve phan tu thu 2*/
+    background-color: #76c9bd;
+}
+.mobile__category-item:nth-of-type(3n + 3) .mobile__category-link {/*tra ve phan tu thu 3*/
+    background-color: #88cf81;
+}
+.mobile__category-link {
+    --line-height: 1.5rem;
+    display: block;
+    display: -webkit-box;/*tao dau ba cham*/
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;/*so dong toi da hien thi*/
+    text-decoration: none;
+    color: var(--while-color);
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: var(--line-height);/*chieu cao mot dong*/
+    height: var(--line-height) * 2;/*neu muon hai dong phai gap doi lineheight*/
+    overflow: hidden;/*an*/
+    text-align: center;
+    width: 110px;
+    border-radius: 4px;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;/*bo di phan hightline khi nhap vao o mobile*/
+    padding: 2px 4px;
+}
+/* product item */
+.home__product {
+    margin-bottom: 100px;
+}
+.home__product-item {
+    position: relative;
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    border-radius: 2px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+    background-color: var(--while-color);
+    transition: transform linear 0.1s;/*chuyen dong*/
+    will-change: transform;
+}
+.home__product-item:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 0.05);
+}
+.home__product-item-img {
+    padding-top: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top center;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+.home__product-item-name {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--text-color);
+    line-height: 1.8rem;
+    height: 3.6rem;
+    margin: 10px 10px 6px;
+    overflow: hidden;
+    display: block;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+.home__product-item-price {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+}
+.home__product-item-price-old {
+    margin-left: 10px;
+    font-size: 1rem;
+    color: #666;
+    text-decoration: line-through;
+}
+.home__product-item-price-current {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    margin-left: 10px;
+}
+.home__product-item-action {
+    display: flex;
+    justify-content: space-between;
+    margin: 6px 0 0 10px;
+}
+.home__product-item-like {
+    font-size: 0.8rem;
+}
+i.home__product-item-like-icon-fill {
+    color: #f63d30;
+    display: none;
+}
+.home__product-item-like-liked .home__product-item-like-icon-fill {
+    display: inline-block;
+    position: relative;
+    top: -4px;
+}
+.home__product-item-like-liked .home__product-item-like-icon-empty {
+    display: none;
+}
+.home__product-item-rating {
+    display: flex;
+    font-size: 1rem;
+    transform: scale(0.6);
+    transform-origin: right;
+    margin-top: -3px;
+    margin-left: auto;
+    color: #d5d5d5;
+}
+.home__product-item-star-gold {
+    color: var(--star-gold-color);
+}
+.home__product-item-sold {
+    font-size: 0.8rem;
+    line-height: 1rem;
+    margin-top: 0.02rem;
+    margin-left: 6px;
+    margin-right: 10px;
+    color: var(--text-color);
+}
+.home__product-item-origin {
+    display: flex;
+    justify-content: space-between;
+    margin: -1px 10px 0;
+    font-size: 1rem;
+    color: #595959;
+    font-weight: 300;
+}
+.home__product-item-favourite {
+    position: absolute;
+    top: 10px;
+    left: -4px;
+    color: var(--primary-color);
+    background-color: currentColor;/*an theo mau color*/
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding-right: 5px;
+    line-height: 1.4rem;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+.home__product-item-favourite i {
+    font-size: 0.8rem;
+    margin: 0 2px 0 5px;
+    color: #fff;
+}
+.home__product-item-favourite span {
+    color: var(--while-color);
+}
+.home__product-item-favourite::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    border-top: 3px solid currentColor;/*an theo color cua the cha*/
+    border-left: 3px solid transparent;
+    filter: brightness(60%);
+}
+.home__product-item-sale-off {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40px;
+    height: 36px;
+    text-align: center;
+    background-color: rgba(255, 216, 64, 0.94);
+    border-top-right-radius: 2px;
+}
+.home__product-item-sale-off::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    border-width: 0 20px 5px;
+    border-style: solid;
+    border-color: transparent  rgba(255, 216, 64, 0.94) transparent rgba(255, 216, 64, 0.94) ;
+}
+.home__product-item-sale-off-percent {
+    color: #ee4d2d;
+    font-weight: 600;
+    font-size: 0.8rem;
+    line-height: 0.8rem;
+    position: relative;
+    top: -2px;
+    margin-left: 2px;
+}
+.home__product-item-sale-off-label {
+    color: var(--while-color);
+    font-size: 0.8rem;
+    line-height: 0.8rem;
+    font-weight: 600;
+    position: relative;
+    top: -12px;
+}
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    padding-left: 0;
+}
+.pagination-1 {
+    position: relative;
+    top: -55px;
+}
+.pagination-item {
+    margin: 0 12px;
+}
+.pagination-item-active .pagination-item-link {
+    color: var(--while-color);
+    background-color: var(--primary-color);
+}
+.pagination-item-active .pagination-item-link:hover {
+    background-color: #f75a3a;
+    color: var(--while-color);
+}
+.pagination-item-link {
+    --height: 30px;
+    display: block;
+    text-decoration: none;
+    font-size: 1rem;
+    color: #939393;
+    min-width: 40px;
+    height: var(--height);
+    line-height: var(--height);
+    text-align: center;
+    border-radius: 2px;
+}
+.footer {
+    border-top: 4px solid var(--primary-color);
+    padding-top: 16px;
+}
+.footer__heading {
+    font-size: 1.1rem;
+    color: var(--text-color);
+}
+.footer__list {
+    padding: 0;
+    list-style: none;
+}
+.footer__list-item-link {
+    display: block;
+    text-decoration: none;
+    font-size: 1rem;
+    color: #737373;
+    padding: 2px 0
+} 
+.footer__list-item-link .footer__list-item-icon {
+    color: var(--text-color);
+}
+.footer__list-item-link:hover {
+    color: var(--primary-color);
+}
+.footer__list-item-icon {
+    font-size: 1.1rem;
+}
+.footer__downloat-QR {
+    width: 80px;
+    height: 80px;
+    /* object-fit: contain; anh k bi mop */
+    border: 1px solid var(--border-color);
+}
+.footer__downloat {
+    display: flex;
+}
+.footer__downloat-app {
+    margin-left: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+.footer__downloat-app-intall {
+    height: 20px;
+}
+.footer__downloat-app-link {
+    text-decoration: none;
+    color: transparent;
+    color: #999;
+}
+.footer__bottom {
+    display: inline-block;
+    background-color: #f5f5f5;
+    margin-top: 32px;
+    width: 100%;
+}
+.footer__text {
+    font-size: 1.1rem;
+    text-align: center;
+    height: 45px;
+    line-height: 45px;
+    padding-top: 2px
+}
+.footer__text p {
+    margin: 0;
+}
+.footer__text:hover {
+    color: #24f727;
+}
